@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #071b45;
+}
+
+/* Navbar */
+nav {
+  background: #071b45;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: orange;
+  font-size: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #071b45, #153d82);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+  background: orange;
+  color: #071b45;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffb733;
+  transform: scale(1.05);
+}
+
+/* Match Schedule */
+#matches {
+  padding: 50px 30px;
+}
+
+#matches h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Match Cards */
+.matches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #071b45;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin: 12px 0;
+  color: #555;
+}
+
+/* Booking Counter */
+.booking {
+  background: #071b45;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 40px;
+}
+
+.booking h2 {
+  color: orange;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.booking h3 {
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .matches {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 8px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .matches {
+    grid-template-columns: 1fr;
+  }
+
+  #matches {
+    padding: 30px 15px;
+  }
+}
